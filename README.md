@@ -24,19 +24,17 @@ The careful email stays inside the pilot, names the limit, and does not add a cu
 
 ## Run
 
-```bash
-npm install
-VITE_AUTH_ENABLED=false npm run dev
-```
+The number gate is plain TypeScript. It runs with no model and no key.
 
-The language red team needs `XAI_API_KEY` in the environment. The number gate works without it.
+The wording pass is one call and needs `XAI_API_KEY`. While it runs, the button counts seconds and the fields stay locked so a late result cannot land on a draft you already changed.
 
 ## Where to read
+
+The review is three files. Start there.
 
 - [src/lib/redline.ts](src/lib/redline.ts) is the number gate. It does not call a model.
 - [src/lib/redline.functions.ts](src/lib/redline.functions.ts) is the one model call, and the second gate that runs after it.
 - [src/components/redline-app.tsx](src/components/redline-app.tsx) is the desk.
-
 
 ## Resume line
 
