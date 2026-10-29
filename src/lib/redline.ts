@@ -39,7 +39,7 @@ export function strayDigits(value: string, source: string): string[] {
 
 export function numberGate(draft: string, source: string): FlaggedSentence[] {
   return draft
-    .split(/(?<=[.!?])\s+/)
+    .split(/\n+|(?<=[.!?])\s+/)
     .map((sentence) => sentence.trim())
     .filter(Boolean)
     .map((sentence) => ({ sentence, stray: strayDigits(sentence, source) }))
@@ -83,7 +83,7 @@ Limit: Does not handle priority-one incidents. No result has been measured acros
 Not established: No customer count. No cost saving. No claim about all IT tickets.`,
   draft: `Subject: Cut your support cost in half
 
-Northline Queue uses AI to resolve 80% of all IT tickets in minutes, and teams at 200 enterprises already run it in production. Customers see a 50% drop in support cost in the first month, including priority-one incidents. Happy to book 15 minutes this week.`,
+Northline Queue uses AI to resolve 80% of all IT tickets in minutes, and teams at 200 enterprises already run it in production. Customers see a 50% drop in support cost in the first month, including priority-one incidents. I can walk through it this week.`,
 };
 
 export const CAREFUL = {
